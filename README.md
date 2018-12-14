@@ -8,6 +8,11 @@
 - Grails 3.3.8
 - Testing with Spock
 
+## Setup
+
+- To test, in the grails console run `test-app`
+- Test results report, `test-report`
+
 ## Notes
 
 - Create an App, `grails create-app grails-tdd`
@@ -15,7 +20,10 @@
 - IntelliJ Grails Command Window, `Ctrl+Alt+G`
 - Grails 3.3.x no longer uses @Test from the Grails Test Mixin Framework [See docs](https://docs.grails.org/latest/guide/testing.html) 
 - For tests Grails uses traits processed in the test class at compile time.
-
+- The `when:` block describes what is to happen
+- The `then:` block describes the expected response to `when:`
+    - Conditions in the `then:` define the expected state and are similar to JUnit assertions
+    - Conditions are written as plain boolean expressions
 
 ## Sources
 
