@@ -15,4 +15,14 @@ class CustomerSpec extends Specification implements DomainUnitTest<Customer> {
         customer.customerName == customerName
         customer.email == email
     }
+
+    void "Test that customerName should allow letters and spaces only"() {
+        expect: "Customer instance is valid/invalid"
+            new Customer(customerName:validCustomerName, email:"valid@mail.com").validate()
+            !new Customer(customerName:invalidCustomerName, email:"valid@mail.com").validate()
+
+        where: "Given valid/invalid customerNames"
+            validCustomerName << ["customer", "  customer  ", "customer name"]
+            invalidCustomerName << ["123customer456", "customer-test", "customer@email.com"]
+    }
 }
