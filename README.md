@@ -25,6 +25,21 @@
 - The `then:` block describes the expected response to `when:`
     - Conditions in the `then:` define the expected state and are similar to JUnit assertions
     - Conditions are written as plain boolean expressions
+- `expect`
+- `where`
+
+### What to test
+
+- Constraints
+- Methods
+
+### TDD
+
+> Write tests then code for...
+
+- Customer has properties customerName and email
+- customerName should allow letters and spaces only
+- The customerName should be unique
 
 ## Sources
 
