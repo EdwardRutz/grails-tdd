@@ -52,4 +52,20 @@ class CustomerSpec extends Specification implements DomainUnitTest<Customer> {
         invalidEmail << ["plainaddress", "@example.com", "#@%^%x!.com"]
     }
 
+    void "Email should be unique"() {
+        when: "The first customer is saved"
+        String firstName = 'First Name'
+        String firstEmail  = 'first@email.com'
+        Customer firstCustomer = new Customer(customerName: firstName, email: firstEmail)
+        firstCustomer.save(flush:true)
+
+        String secondName = 'Second Name'
+        Customer customerWithSameEmail =
+                new Customer(customerName: secondName, email: firstEmail)
+
+        then: "Another customer with same customerName is invalid"
+        Customer.count() == 1
+        !customerWithSameEmail.save(flush:true)
+    }
+
 }

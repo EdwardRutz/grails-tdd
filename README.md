@@ -1,7 +1,7 @@
 # Using Grails and Test Drive Development
     
 >A basic demo creating an app via TDD
-
+- Using TDD create a new customers with proper names and email addresses.
 
 ## Dependencies
 
@@ -41,7 +41,7 @@
 - customerName should allow letters and spaces only
 - The customerName should be unique
 - Email should have proper format
-
+- Email should be unique
 
 ## Sources
 
