@@ -1,7 +1,7 @@
 # Using Grails and Test Drive Development
     
 >A basic demo creating an app via TDD
-- Using TDD create a new customers with proper names and email addresses.
+- Using TDD create new customers (domain class Customer) with properly formatted names and email addresses.
 
 ## Dependencies
 
@@ -42,6 +42,10 @@
 - The customerName should be unique
 - Email should have proper format
 - Email should be unique
+
+##
+
+- Generate controller and views with grails, `generate-all Customer`
 
 ## Sources
 
