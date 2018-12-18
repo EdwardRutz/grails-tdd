@@ -40,10 +40,12 @@
 - Customer has properties customerName and email
 - customerName should allow letters and spaces only
 - The customerName should be unique
+- Email should have proper format
+
 
 ## Sources
 
-- [ideyatech: Starting Grails with Test-Driven Development](https://www.ideyatech.com/starting-grails-with-test-driven-development/)
+- [Ideyatech Tutorial: Starting Grails with Test-Driven Development](https://www.ideyatech.com/starting-grails-with-test-driven-development/)
 - [Docs: Grails Testing Support](https://testing.grails.org/latest/guide/index.html)
 - [Grails Docs](http://grails.github.io/grails-doc/3.0.x/guide/single.html)
 - [Google: Spock Basics](https://code.google.com/archive/p/spock/wikis/SpockBasics.wiki)

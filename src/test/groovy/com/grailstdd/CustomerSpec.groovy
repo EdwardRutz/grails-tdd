@@ -42,4 +42,14 @@ class CustomerSpec extends Specification implements DomainUnitTest<Customer> {
             !customerWithSameCustomerName.validate()
     }
 
+    void "Email should have proper format"() {
+        expect: "Customer instance is valid/invalid"
+        new Customer(customerName:"customer", email:validEmail).validate()
+        !new Customer(customerName:"customer", email:invalidEmail).validate()
+
+        where: "Given valid/invalid emails"
+        validEmail << ["customer@email.com", "1234567890@example.com", "email@test.museum"]
+        invalidEmail << ["plainaddress", "@example.com", "#@%^%x!.com"]
+    }
+
 }

@@ -5,5 +5,6 @@ class Customer {
     String email
     static constraints = {
         customerName matches: "^[a-zA-Z ]+\$", unique: true
+        email email: true
     }
 }
