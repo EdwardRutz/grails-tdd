@@ -43,9 +43,11 @@
 - Email should have proper format
 - Email should be unique
 
-##
+### More Notes
 
 - Generate controller and views with grails, `generate-all Customer`
+- Tests for CRUD auto generated
+
 
 ## Sources
 
